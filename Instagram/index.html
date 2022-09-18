@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Jau kai tiek CSS, tikrai butu naudinga iškelti į atskirą CSS failą -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background: #ececec;
+        }
+        .paveiksliukas1 {
+            position: relative;
+            left: 30%;
+            margin-top: 25px;
+            width: 40%;
+        }
+
+        form {
+            /* nereikalingas, bandyk centruot elementus, o ne su absolutes pozicionuot */
+            transform: translate(-7%, -10%);
+        }
+
+        .box form .logas {
+            width: 250px;
+            /* nereikalingas, bandyk centruot elementus, o ne su absolutes pozicionuot */
+            position: absolute;
+            left: 24%;
+            top: 60%;
+            color: #999;
+            pointer-events: none;
+            /* animacijos, šaunuolis! */
+            transition: all 0.5s ease;
+            font-size: 13px;
+        }
+        /* kodėl toks specifinis selektorius? .slaptikas būtų pakankamai 
+        +venkim rašyt lietuvišką kodą - įsidarbinus įmonėje liksi nesuprastas :D */
+        .boxx form .slaptikas {
+            width: 250px;   
+            position: absolute;
+            left: 24%;
+            top: 30%;
+            color: #999;
+            pointer-events: none;
+            transition: all 0.5s ease;
+            font-size: 13px;
+        }
+        /* kam tas css operatoriuos čia? galėtum tiesiog turėt parent elementą identifikuojantį atitinkamus fieldus */
+        /* tavo bugas apie kurį klausei ir kyla dėl neteisingo operatoriaus  */
+        .box input:focus ~ .logas,
+        .box input:valid ~ .logas
+        {
+            top: 37%;
+            left: 24%;
+            right: 50%;
+            font-size: 11px;
+            font-weight: bold;
+        }
+        .boxx input:focus ~ .slaptikas,
+        .boxx input:valid ~ .slaptikas
+         {
+            top: 12%;
+            left: 24%;
+            right: 50%;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+
+        input[type=Text] {
+            position: relative;
+            left: 22%;
+            width: 250px;
+            margin-top: 25px;
+            background-color: rgb(255, 255, 255);
+            padding: 12px 8px 12px 8px;
+            border: 1px solid rgb(233, 231, 231);
+            border-radius: 4px;
+}
+        input[type=password] {
+            position: relative;
+            left: 22%;
+            width: 250px;
+            margin: 10px 0px 10px 0px;
+            padding: 12px 8px 12px 8px;
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgb(233, 231, 231);
+            border-radius: 4px;
+}
+        .log {
+            position: relative;
+            left: 15%;
+            width: 270px;
+            padding: 8px 7px 8px 7px;
+            border-radius: 4px;
+            background-color: rgb(28, 178, 204);
+            border: 1px solid rgb(255, 255, 255);
+            color: white;
+            opacity: 40%;
+            font-size: 14px;
+        }
+        .tekstas1 {
+            color: grey;
+            text-align: center;
+            justify-content: space-between;
+            position: relative;
+            left: 0%;
+}
+
+        .tekstas1:before {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 2px;
+            position: absolute;
+            background: rgb(233, 231, 231);
+            left: 15%;
+            top: 50%;
+        }
+        .tekstas1:after { 
+            content: "";
+            display: block;
+            width: 100px;
+            height: 2px;
+            position: absolute;
+            background: rgb(233, 231, 231);
+            right: 15%;
+            top: 50%;
+        }
+ 
+        .fblink {
+            position: relative;
+            left: 34%;
+            margin-top: 25px;
+        }
+
+        .fblink a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #021897
+        }
+        .fblink span {
+            margin-right: 5px;
+            color: #021897;
+            font-size: 18px;
+        }
+
+        .forgot {
+            text-align: center;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            position: relative;
+            left: 1%;
+        }
+
+        .forgot a {
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            color: #025fd2;
+        }
+        .signup {
+            position: relative;
+            border: 1px solid #b6b6b6;
+            border-radius: 3px;
+            width: 19.5%;
+            padding: 10px 7px 10px 7px;
+            left: 50.1%;
+            transform: translateX(-50.1%);
+            margin-top: 30px;
+            text-align: center;
+            background: #fff;
+        }
+        .signup a{
+            text-decoration: none;
+            margin-left: 5px;
+            color: #008aff;
+            font-weight: bold;
+        }
+        header{
+            position: relative;
+            margin-top: 20px;
+            border: 1px solid #b6b6b6;
+            border-radius: 3px;
+            width: 20%;
+            left: 40%;
+            background: #fff;
+        }
+        .app {
+            text-align: center;
+            margin-top: 25px;
+        }
+        .pav .aple {
+            position: relative;
+            left: 42%;
+            width: 140px;
+            height: 50px;
+        }
+        .pav .google {
+            position: relative;
+            left: 43%;
+            width: 140px;
+            height: 50px;
+        }
+        .fb {
+            width: 12%;
+            position: relative;
+            left:-60%;
+            bottom: -18px;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <img class="paveiksliukas1" src="logo.svg.png" alt="">
+    <br>
+    <div class="box">
+    <form>
+        <!-- id niekur nepanaudotas -->
+    <input type="Text" 
+        id="prisijungimas"
+        placeholder="" 
+        required=""
+    >
+    <label class="logas">Phone number, username, or email</label>
+</form>
+</div>
+    <br>
+    <div class="boxx">
+    <form>
+    <input type="password" 
+        id="slaptazodis"
+        placeholder=""
+        required=""
+    >
+    <label class="slaptikas">Password</label>
+    <br>
+    <br>
+</form>
+</div>
+    <button class="log"><b>Log in</button></b>
+    <br>
+    <b><p class="tekstas1">OR</p></b>
+    <div class="fblink">   
+        <span class="fa-brands fa-square-facebook">
+        </span>
+        <a href="#">Log in with Facebook <img class="fb" src="fb.png" alt=""> </a>
+    </div>
+    <div class="forgot">
+        <a href="#">Forgot password?</a>
+    </div>
+</header>
+    <div class="signup">
+        <p>Don't have an account?<a href="#">Sign up</a></p>
+    </div>
+    <p class="app">Get the app</p>
+    <div class="pav">
+    <a href="#">
+    <img class="aple" src="aple.png" alt="">
+    </a>
+    <a href="#">
+    <img class="google" src="google.png" alt="">
+    </a>
+</div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background: url(bg.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .box {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            background: rgb(236, 234, 234);
+            padding: 50px;
+            box-sizing: border-box;
+            border: 1 px solid rgba(0, 0, 0, .1);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+        }
+        .box h1{
+            text-align: center;
+            padding: 20px;
+            color: rgb(51, 51, 51);
+        }
+
+        .box input {
+            padding: 10px 0;
+            margin-bottom: 25px;
+            background: rgb(236, 234, 234);
+        }
+        .box textarea {
+            width: 470px;
+            padding: 0;
+            margin-bottom: 20px;
+            background: rgb(236, 234, 234);
+        }
+
+        .box input,
+        .box textarea {
+            width: 100%;
+            box-sizing: border-box;
+            box-shadow: none;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid rgb(54, 54, 54);
+        }
+        .box ::placeholder {
+            font-size: 14px;
+        }
+
+        .box input[type="submit"] {
+            width: 160px;
+            height: 40px;
+            border-radius: 0px;
+            color: rgb(54, 54, 54);
+            border-bottom: none;
+            cursor: pointer;
+            border: 1px solid rgb(54, 54, 54);
+            background: rgb(54, 54, 54);
+            color: #fff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+        <main>
+            <div class="box">
+                <h1>Contact Us</h1>
+                <form>
+                    <div>
+                        <label>Name:</label>
+                        <input type="text" placeholder="Petras" name="" required="">
+                    </div>
+                    <div>
+                        <label>Email:</label>
+                        <input type="email" placeholder="Petras@petras.lt" name="" required="">
+                    </div>
+                    <div>
+                        <label>Reference Number:</label>
+                        <input type="number" placeholder="123"  name="" required="">
+                    </div>
+                    <div>
+                        <textarea placeholder="Your message goes here.." required=""></textarea>
+                    </div>
+                    <input type="submit" name="" value="Send">
+                </form>
+            </div>
+        </main>
+</body>
+</html>

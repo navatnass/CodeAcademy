@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page{
+    max-width: max-content;
+    max-height: max-content;
+}
+header{
+    background-color: rgba(5, 5, 41, 0.952);
+}
+img {
+    position: relative;
+    left: 40%;
+    width: 20%;
+}
+
+.tekstas {
+    position: relative;
+    left: 20%;
+    color: white;
+    margin-bottom: 20px;
+}
+
+nav {
+    background-color:  #d6b731;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    left: 20%;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    text-align: right;
+    width: 60%;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    width: 25%;
+    align-items: left;
+    list-style: none;
+    position: relative;
+    left: 30%;
+}
+
+ul a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#About h2 {
+    position: relative;
+    margin: 35px;
+    left: 18%;
+    font-size: 25px;
+    font-style: bold;
+}
+
+#About p {
+    position: relative;
+    left: 20%;
+    width: 60%;
+    margin-bottom: 45px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: justify;
+}
+#About a {
+  padding: 10px 50px;
+  background-color: #d11e00;
+  border-radius: 10px;
+  color: white;
+  position: relative;
+  left: 46%;
+}
+
+#Table{
+    background-color: rgba(0, 0, 255, 0.76);
+}
+#Table h3{
+    position: relative;
+    padding: 25px;
+    margin: 15px;
+    left: 18%;
+    font-size: 25px;
+    font-style: bold;
+    color: white;
+}
+table{
+    width: 100%;
+    position: relative;
+    left: 20%;
+    width: 60%;
+}
+table, tr, td{
+    border: 2px solid red;
+    border-collapse: collapse;
+    color: white;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+  }
+
+td:last-child,
+tr:last-child{
+    font-weight: bold;
+    text-align: right;
+}
+
+#Contacts h4 {
+    position: relative;
+    padding: 15px;
+    margin: 25px;
+    left: 18%;
+    font-size: 25px;
+    font-style: bold;
+    color: black;
+}
+
+
+#Contacts ul {
+  position: relative;
+  left: 22%;
+  list-style: disc;
+  display: inline-block;
+  margin: 5px;
+}
+
+#Contacts a {
+    margin: 20px;
+    position: relative;
+    left: 47.5%;
+    display: flex;
+    align-items: center;
+}
+
+footer{
+    text-align: center;
+    background-color: #d6b731;
+    padding: 20px 0;
+    color: white;
+}

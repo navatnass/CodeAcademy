@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        form {
+            position: relative;
+            left: 5%;
+        }
+        form .radio {
+            position: relative;
+            width: 400px;
+        }
+        form .box1 {
+            width:  400px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Payment form</h1>
+        <p>Required field are followed by*</p>
+        <h2>Contact information</h2>
+    </header>
+    <form>
+    <div class="radio">
+        <fieldset>
+            <legend>Title</legend>
+            <input type="radio" value="Mr" id="radio">
+            <input type="radio" value="Mrs" id="radio">
+        </fieldset>
+    </div>
+        <div class="box-1">
+            <input type="text" value="John Doe" id="text">
+            <label>Name: *</label>
+            <input type="email" value="" id="email">
+            <label>Email: *</label>
+            <input type="password" value="" id="password">
+            <label>Password: *</label>
+        </div>
+        <div class="box-2">
+            <select name="Card" id="Card" value="Visa">
+            <option value="Visa">Visa</option>
+            <option value="Mastercard">Mastercard</option>
+            <option value="Revolut">Revolut</option>
+            </select>
+            <label>Card type: *</label>
+            <input type="number" value="" id="number">
+            <label>Card number: *</label>
+            <input type="number" value="--------- ----" id="number">
+            <label>Expiration date: *</label>
+        </div>
+    </form>
+</body>
+</html>

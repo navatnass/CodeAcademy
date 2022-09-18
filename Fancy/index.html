@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fancy</title>
+    <style>
+        body {
+            background-color: darkslategrey
+        }
+        .container {
+            text-align: center;
+        }
+        div {
+             margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        label:read-only {
+           margin-bottom: 10px;
+        }
+        input:read-only {
+            background-color: darkgrey;
+        }
+
+        input:valid,
+        textarea:valid,
+        input:in-range {
+            border: 2px solid green;
+        }
+
+        input:invalid,
+        textarea:invalid,
+        input:out-of-range {
+            border: 2px solid red;
+        }
+        input:required,
+        textarea:required {
+            border-left: 2px solid violet;
+        }
+
+        .required {
+            background-color: violet;
+        }
+
+        .submit-button {
+            background-color: green;
+            color: white;
+        }
+
+        .submit-button:hover {
+            background-color: darkgreen;
+        }
+
+        input[type="checkbox"]:checked + label {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Register to Fancy Form</h1>
+    </header>
+    <main>
+        <div class="container">
+        <p>All fields are <span class="required">required</span> unless marked as "optional"</p>
+        <form method="POST">
+            <div>
+                <label for="read-only">Your Unique ID that you can't change</label>
+                <br>
+                <input id="read-only" type="text" name="read-only" value="YBX0123" readonly>
+            </div>
+            <div>
+                <label for="Email">Email:</label>
+                <br>
+                <input id="email" type="text" name="email" required>
+            </div>
+            <div>
+                <label for="password">Password:</label><br>
+                <input id="password" type="password" name="password" required>
+            </div>
+            <div>
+                <label for="age">Age:</label><br>
+                <input id="age" type="number" name="age" min="18" max="65" required>
+            </div>
+            <div>
+                <label for="about">Tell us a little about yourself <small>(optional)</small>:</label><br>
+                <textarea id="about" name="about" required></textarea>
+            </div>
+            <div>
+                <input id="terms" type="checkbox" name="terms" value="1" required>
+                <label for="terms">I agree with the Terms & Conditions</label>
+            </div>
+            <button class="submit-button">
+                Register
+            </button>
+        </form>
+        </div>
+    </main>
+</body>
+</html>
